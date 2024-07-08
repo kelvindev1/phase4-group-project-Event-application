@@ -123,16 +123,17 @@ class User(db.Model, SerializerMixin):
     events = db.relationship('Event', back_populates='organizer', lazy=True, cascade='all, delete-orphan')
     payments = db.relationship('Payment', back_populates='user', lazy=True, cascade='all, delete-orphan')
     eventbookmarks = db.relationship('EventBookmark', back_populates='user', lazy=True, cascade='all, delete-orphan')
+    roles = db.relationship('Role', secondary=user_roles, back_populates='users')
 
 
 class Role(db.Model):
     __tablename__ = 'role'
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String)
-    user = db.relationship('User', back_populates='roles', secondary = "")
+    users = db.relationship('User', back_populates='roles', secondary = "user_roles")
 
 class TokenBlocklist(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    jti = db.Column(db.string, nullable=False, index = True)
+    jti = db.Column(db.String, nullable=False, index = True)
     created_at = db.Column(db.DateTime, nullable=False)
 
