@@ -1,0 +1,96 @@
+.head {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    padding: 10px 0;
+    margin-left: -650px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    position: relative;
+    background-color: #22222200;
+}
+
+body::before {
+    content: '';
+    background-image: url('../assets/pic1.jpeg');
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    filter: blur(5px);
+    opacity: 1;
+}
+
+.head nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.head .logo {
+    font-size: 24px;
+    color: #fff;
+    display: flex;
+    margin-left: 0px;
+}
+
+.head .logo .site-name {
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.head .logo .site-tagline {
+    font-size: 22px;
+    color: #ccac00;
+    margin-left: 5px;
+}
+
+.head .logo .site-icon {
+    font-size: 24px;
+    vertical-align: middle;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 1;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    font-size: 18px;
+    margin-left: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.nav-links li a:hover {
+    color: #ccac00;
+}
+
+.event-ticketing {
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    width: 600px;
+    margin-left: 350px;
+    margin-top: 100px;
+    color: rgb(255, 255, 255);
+}

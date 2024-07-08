@@ -1,0 +1,79 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #9c9b9b;
+}
+
+.RegisterForm {
+    max-width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #bdbdbd;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.RegisterForm h2 {
+    margin-bottom: 10px;
+    color: #333333;
+    font-size: 1.3rem;
+    width: 200px;
+}
+
+.RegisterForm form {
+    display: flex;
+    flex-direction: column;
+}
+
+.RegisterForm label {
+    margin-bottom: 10px;
+    color: #555555;
+    text-align: left;
+
+}
+
+.RegisterForm input[type="text"],
+.RegisterForm input[type="email"],
+.RegisterForm input[type="tel"],
+.RegisterForm input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.RegisterForm button {
+    margin-top: 15px;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #ffffff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.RegisterForm button:hover {
+    background-color: #0056b3;
+}
+
+.Login label,
+.RegisterForm label {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.Login input[type="password"]+span,
+.RegisterForm input[type="password"]+span {
+    position: absolute;
+    right: 6px;
+    cursor: pointer;
+}

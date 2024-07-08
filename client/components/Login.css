@@ -1,0 +1,67 @@
+/* Login.css */
+
+.Login {
+    max-width: 350px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #bdbbbb;
+    box-shadow: 0px 0px 20px rgba(131, 75, 75, 0.1);
+}
+
+.Login h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+.Login form {
+    display: flex;
+    flex-direction: column;
+}
+
+.Login label {
+    margin-bottom: 10px;
+    color: #555555;
+}
+
+.Login input[type="text"],
+.Login input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.Login button {
+    margin-top: 10px;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.Login button:hover {
+    background-color: #0056b3;
+}
+
+.Login label,
+.RegisterForm label {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.Login input[type="password"]+span,
+.RegisterForm input[type="password"]+span {
+    position: absolute;
+    right: 6px;
+    cursor: pointer;
+}
